@@ -1,0 +1,28 @@
+<div class="container pad-top">
+	<h3>Details for {{history.firstName}}</h3>
+	<table class="table historytable">
+		<tr>
+			<td>First Name</td>
+			<td>{{history.firstName}}</td>
+		</tr>
+		<tr>
+			<td>Last Name</td>
+			<td>{{history.lastName}}</td>
+		</tr>
+		<tr>
+			<td>Recipient Email Address</td>
+			<td>{{history.recipientEmailAddress}}</td>
+		</tr>
+		<tr>
+			<td>Email Subject</td>
+			<td>{{history.emailSubject}}</td>
+		</tr>
+		<tr>
+			<td>Email Body</td>
+			<td>{{history.emailBody}}</td>
+		</tr>
+	</table>
+	<div>
+		<a class="btn btn-primary" data-ui-sref="editHistory({id:history.id})">Edit</a>
+	</div>
+</div>

@@ -1,0 +1,23 @@
+<div class="container pad-top">
+	<!-- this class is connecting my _form with a submit button of a addHistory and pairing with HistoryCreateController  -->
+	<form class="form-horizontal text-center" data-ng-submit="addHistory()" role="form">
+		<div data-ng-include="'views/_form.html'"></div>
+		<input type="submit" class="btn btn-primary" value="Send Email" /> 
+		<input type="reset" class="btn btn-secondary" value="Reset Values" />
+	</form>
+</div>
+<div class="container">
+	<!-- Example row of columns -->
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h2>History List</h2>
+			<p>
+				<a class="btn btn-default" href="#/histories" role="button">Email History &raquo;</a>
+			</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<footer> </footer>
+</div>

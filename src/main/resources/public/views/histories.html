@@ -1,0 +1,33 @@
+<div class="container pad-top">
+	<h3>Email History</h3>
+	<table class="table historytable">
+		<tr>
+			<th id="First Name">First Name</th>
+			<th id="Last Name">Last Name</th>
+			<th id="Sent To">Sent To</th>
+		</tr>
+		<tr data-ng-repeat="history in histories">
+			<td>{{history.firstName}}</td>
+			<td>{{history.lastName}}</td>
+			<td>{{history.recipientEmailAddress}}</td>
+			<td><a class="btn btn-primary"data-ui-sref="viewHistory({id:history.id})">View</a> 
+			<a class="btn btn-danger" data-ng-click="deleteHistory(history)">Delete</a>
+			</td>
+		</tr>
+	</table>
+</div>
+<div class="container">
+	<!-- Example row of columns -->
+	<div class="row">
+		<div class="col-md-12 text-center">
+			<h2>Send an Email</h2>
+			<p>
+				<a class="btn btn-default" href="#/" role="button">New Email &raquo;</a>
+			</p>
+		</div>
+	</div>
+
+	<hr>
+
+	<footer> </footer>
+</div>
