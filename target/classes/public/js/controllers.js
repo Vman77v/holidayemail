@@ -15,22 +15,17 @@ angular.module('app.controllers', []).controller('HistoryListController',
 			$scope.history = History.get({
 				id : $stateParams.id
 			}); // Get a single history.Issues a GET to /api/v1/histories/:id
-		})
-		
-		
-		.controller('HistoryCreateController',
-		function($scope, $state, $stateParams, History) {
+		}).controller('HistoryCreateController',
+		function($scope, $state, popupService, $stateParams, History) {
 			$scope.history = new History(); // create new history instance.Properties will be set via ng-model on UI
 
-			$scope.addHistory = function() { // create a new history. Issues a POST to /api/v1/histories
-				$scope.history.$save(function() {
-					$state.go('histories'); // on success go back to the list i.e. histories state.
-				});
-			};
-		})
-		
-		
-		.controller('HitoryEditController',
+			$scope.addHistory = function() { // create a new history. Issues a POST to /api/v1/histories 												
+					$scope.history.$save(function() {
+						$state.go('histories'); // on success go back to the list i.e. histories state.
+					});//end save function
+					
+			} //end addHistory
+		}).controller('HitoryEditController',
 		function($scope, $state, $stateParams, History) {
 			$scope.updateHistory = function() { // Update the edited history. Issues a PUT to /api/v1/histories/:id
 				$scope.history.$update(function() {

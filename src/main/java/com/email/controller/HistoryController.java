@@ -24,13 +24,7 @@ public class HistoryController {
 	@RequestMapping(value = "histories", method = RequestMethod.GET)
 	public List<History> list() {
 		return historyRepository.findAll();
-	}
-	
-	//added a second get request so I can initialize a new get on the home screen instead of the histories page
-	@RequestMapping(value = "history", method = RequestMethod.GET)
-	public List<History> list1() {
-		return historyRepository.findAll();
-	}
+	}	
 	
 	//CRUD operations below
 	

@@ -48,11 +48,17 @@
 				//home page
 				.state('home', {
 					url : "/",
-//					templateUrl : viewsPrefix + "home.html",
 					templateUrl : viewsPrefix + 'history-add.html',
-					controller : 'HistoryCreateController',
+					controller : 'HistoryCreateController',					
 					data : {
 						pageTitle : 'Home'
+					},
+					//send request to SendGrid java class
+					success : function(SendGrid){
+						
+					},
+					error : {
+						
 					}
 				})
 				.state('histories', {
@@ -66,13 +72,6 @@
 					templateUrl : viewsPrefix + 'history-view.html',
 					controller : 'HistoryViewController'
 				})
-				//removed the new call because i wanted the page to populate with an add already staged.
-//				.state('newHistory', {
-//					url : '/new',
-//					templateUrl : viewsPrefix + 'history-add.html',
-//					controller : 'HistoryCreateController'
-//				})
-				
 				.state('editHistory', {
 					url : '/histories/:id/edit',
 					templateUrl : viewsPrefix + 'history-edit.html',
